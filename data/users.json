@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "username": "baswilson",
+            "password": "$2y$10$K3xSFS69FrZfxLdlkbbwHOG2WOnXFq3REfutfWKoGPVz4QdzywLsu",
+            "email": "bas@gmail.com",
+            "sessionToken": "e3d3b78b4327c747413407bdb43430b32672eedbf0137db22edeccf23d7e9a0bce853e5581ce8232504af5a8958beecb741de07707e752c130a420e666686def",
+            "lastSignIn": 1544752607,
+            "memberSince": 1544728457,
+            "public": true,
+            "profilePic": "default.png",
+            "followers": [],
+            "following": []
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+@media screen and (min-width: 375px) and (max-width: 890px) {
+  /* mobile and tablet css */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 6000px) {
+  /* large screens */
+  body {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+@media screen and (min-width: 890px) and (max-width: 1024px) {
+  /* normal css */
+}
