@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Profile - Social Globe</title>
+    <title>User - Social Globe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Include the required files -->
     <link rel="stylesheet" href="css/main.css">
@@ -52,7 +52,7 @@
     <script src="js/fileUploader.js"></script>
     <script src="js/tools.js"></script>
     <script src="js/handlePosts.js"></script>
-    <script src="js/handleProfile.js"></script>
+    <script src="js/handleProfileOther.js"></script>
 
 </body>
 </html>

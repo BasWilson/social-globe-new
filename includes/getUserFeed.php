@@ -17,10 +17,13 @@ $dataPosts = json_decode($jsondataPosts);
 $html = "";
 $notifications = "";
 
-// Kijk of er members zijn
-if (empty($dataUsers->users->following)) {
-  $notifications .= '<div class="tip-div"><p><strong>TIP: </strong>Door mensen te volgen zal je feed wat leuker worden.</p></div>';
-} 
+// Kijk of er mensen gefollwed zijn
+foreach ($dataUsers->users as $key => $userL) {
+  if (empty($userL->following) && $userL->username == $_SESSION['username']) {
+    $notifications .= '<div class="tip-div"><p><strong>TIP: </strong>Door mensen te volgen zal je feed wat leuker worden.</p></div>';
+  } 
+}
+
 
 // Vind nu alle posts
 if (empty($dataPosts->posts)) {
@@ -94,7 +97,6 @@ function createPostHTML ($postId, $postsArray, $user) {
       $htmlcode .= '<div class="post-comments-div" id="post-comments-div-'.$postId.'">';
   // Haal al de comments op voor deze post
   foreach ($post->comments as $commentKey => $comment) {
-    ChromePhp::Log($comment);
     $htmlcode .= '
       <div class="post-comment-div">
         <a href="user.php?username='.$comment->commenterUsername.'" >@'.$comment->commenterUsername.'</a>

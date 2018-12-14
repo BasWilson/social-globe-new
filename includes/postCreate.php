@@ -43,6 +43,8 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
     $name = $_FILES['file']['name'];
+    $name = fixFileName($name);
+    ChromePhp::Log($name);
     $size = $_FILES['file']['size'];
 
     if ($size < 50000000) {
@@ -97,4 +99,17 @@ function postText ($body, $imageName, $username) {
         return false;
     }
 }
+
+function fixFileName ($imagen) {
+    $filename=pathinfo($imagen,PATHINFO_FILENAME);
+    $ext=pathinfo($imagen,PATHINFO_EXTENSION);
+  
+    //replace all these characters with an hyphen
+    $repar=array(".",","," ",";","'","\\","\"","/","(",")","?");
+  
+    $repairedfilename=str_replace($repar,"-",$filename);
+    $cleanfilename=$repairedfilename.".".strtolower($ext);
+  
+    return $cleanfilename;
+  }
 ?>

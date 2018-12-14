@@ -104,10 +104,10 @@ function createProfileHTML ($users) {
 
             $html .= '
                 <img src="images/profilePics/'.$user->profilePic.'" />
-                <a class="pf-item">@'.$user->username.'</a>
+                <a href="myprofile.php" class="pf-item">@'.$user->username.'</a>
                 <a class="pf-item">Volgers: '.sizeof($user->followers).'</a>
                 <a class="pf-item">Volgend: '.sizeof($user->following).'</a>
-                <a class="pf-item">Lid sinds: '.$date.'</a>
+                <p class="pf-item">Lid sinds: '.$date.'</p>
             ';
 
         }

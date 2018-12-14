@@ -13,6 +13,7 @@ function refreshFeed () {
         success:function(data) {
             if (data != 0) {
                 $('#profile-div').empty();
+                $('#profile-div').append("<h3 style='text-align: center;'>Jouw profiel</h3>");
                 $('#profile-div').append(data.profileHTML);
                 $('#posts-div').empty();
                 $('#posts-div').append(data.postsHTML);

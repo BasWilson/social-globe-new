@@ -7,12 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Feed - Social Globe</title>
+    <title>Vind mensen - Social Globe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Include the required files -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/posts.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/queries.css" type="text/css">
 
 </head>
@@ -43,7 +44,12 @@
     <div id="notifications-div">
     </div>
 
-    <div class="field-container " id="feed-div">
+    <div class="field-container search-div" id="search-div">
+        <h3>Vind hier nieuwe mensen</h3>
+        <input type="text" placeholder="Zoek hier naar mensen" id="search-field" />
+    </div>
+
+    <div id="results-div">
     </div>
 
     <div id="noti-box" class="noti-box"> 
@@ -63,8 +69,7 @@
     <script src="js/fileUploader.js"></script>
     <script src="js/tools.js"></script>
     <script src="js/handleNewPost.js"></script>
-    <script src="js/handlePosts.js"></script>
-    <script src="js/handleFeed.js"></script>
+    <script src="js/handleSearch.js"></script>
 
 </body>
 </html>
