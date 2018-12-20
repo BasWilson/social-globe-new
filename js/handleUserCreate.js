@@ -8,6 +8,9 @@ function register () {
         return showNotification(3000, "Vul graag alle velden in", false);
     }
 
+    $('.form-container').hide();
+    $('.loader').show();
+
     $.ajax({
          type: "POST",
          url: 'includes/userCreate.php',
@@ -23,6 +26,8 @@ function register () {
                 }, 2000);
                 window.location.href = "index.php"
             } else {
+                $('.form-container').show();
+                $('.loader').hide();
                 showNotification(3000, "You did an oopsie", false);
             }
          }

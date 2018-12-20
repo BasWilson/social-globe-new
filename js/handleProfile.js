@@ -26,7 +26,19 @@ function refreshFeed () {
    });
 }
 
-
+function switchPrivacy () {
+        $.ajax({
+            type: "POST",
+            url: 'includes/profileSetPrivacy.php',
+            success:function(data) {
+               if (data != 0) {
+                   location.reload();
+                } else {
+                    showNotification(3000, "Er is iets fout gegaan", false);
+                }
+            }
+       });
+}
 $.fn.reverseChildren = function() {
     return this.each(function(){
       var $this = $(this);

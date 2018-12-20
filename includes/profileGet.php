@@ -110,6 +110,13 @@ function createProfileHTML ($users) {
                 <p class="pf-item">Lid sinds: '.$date.'</p>
             ';
 
+            if ($user->public) {
+              $html .= '<button style="margin: 10px;" onclick="switchPrivacy();" >Maak profiel privé</button>';
+
+            } else {
+              $html .= '<button style="margin: 10px;" onclick="switchPrivacy();" >Maak profiel publiek</button>';
+            }
+
         }
     }
 

@@ -1,27 +1,4 @@
 {
     "posts": [
-        {
-            "body": "We did an oopsie",
-            "image": "1544748225.png",
-            "comments": [
-                {
-                    "comment": "dsf",
-                    "commenterUsername": "baswilson"
-                },
-                {
-                    "comment": "Noice",
-                    "commenterUsername": "baswilson"
-                }
-            ],
-            "likes": 0,
-            "posterUsername": "baswilson"
-        },
-        {
-            "body": "fdsfs",
-            "image": 0,
-            "comments": [],
-            "likes": 4,
-            "posterUsername": "baswilson"
-        }
     ]
 }

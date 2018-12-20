@@ -4,7 +4,8 @@
 if (session_status() != 2) {
     session_start();
     if ($_SESSION['username'] && $_SESSION['sessionToken']) {
-        verifiyToken();
+            verifiyToken();
+            verifiyEmail();
     } else {
         session_destroy();
         header('Location: login.php');
@@ -13,7 +14,6 @@ if (session_status() != 2) {
 }
 
 function verifiyToken () {
-
     $file = "data/users.json";
     $jsondata = file_get_contents($file);
     $data = json_decode($jsondata);
@@ -25,6 +25,25 @@ function verifiyToken () {
             session_destroy();
             header('Location: login.php');
             exit;
+        }
+
+    }
+    
+}
+function verifiyEmail () {
+
+    $file = "data/users.json";
+    $jsondata = file_get_contents($file);
+    $data = json_decode($jsondata);
+    
+    foreach ($data->users as $key => $user) {
+    
+        // Kijk of de user is geverifieerd
+        if ($user->username == $_SESSION['username'] && $user->verified) {
+            // Is geverifieerd
+        } else if ($user->username == $_SESSION['username'] && !$user->verified) {
+            // Is niet geverifieerd
+            header('Location: verify.php');
         }
     }
     
