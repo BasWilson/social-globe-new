@@ -4,15 +4,17 @@
             "username": "baswilson",
             "password": "$2y$10$K3xSFS69FrZfxLdlkbbwHOG2WOnXFq3REfutfWKoGPVz4QdzywLsu",
             "email": "bas@gmail.com",
-            "sessionToken": "54c518e472d0410629afed97efc9c7ebd17de9cfc0b53b21dd59a9d0b64838a72f7572e49abbcdb26b1bbbd80cfc7cf6c21d244fde1418ac88b52042f8602901",
-            "lastSignIn": 1544772111,
+            "sessionToken": "42a0f5b0bd48b0d761eb813ac1cdc865287202033dae561b8e555da578aa088780184e5d991e6f69e8bc22bdd722249f744a92e99fd2ad7fd5758a5ff874bb2d",
+            "lastSignIn": 1545264760,
             "memberSince": 1544728457,
             "public": true,
             "profilePic": "default.png",
             "followers": [
                 "aye12"
             ],
-            "following": []
+            "following": [
+                "aye"
+            ]
         },
         {
             "username": "aye",
@@ -23,7 +25,9 @@
             "memberSince": 1544774377,
             "public": false,
             "profilePic": "default.png",
-            "followers": [],
+            "followers": [
+                "baswilson"
+            ],
             "following": []
         },
         {

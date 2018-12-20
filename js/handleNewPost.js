@@ -19,6 +19,7 @@ $("#drop-area-post").dmUploader({
     onUploadComplete: function () {
         showNotification(2500, "Bericht is geplaatst", true);
         $('#post-body').val("");
+        $('#imageUploadProgress').hide();
         $('#imageUploadProgress').val(0);
         $('#imageUploadProgress').text("0%");
         $("#drop-area-post").dmUploader("reset");
@@ -35,6 +36,7 @@ $("#drop-area-post").dmUploader({
     },
     onNewFile: function (id, file){
         imageSet = true;
+        $('#image-name').html('Foto geselecteerd: <span style="color: #FFD400;">'+file.name+'</span>');
     }
   });
 
@@ -68,7 +70,9 @@ function createPost() {
            });
         } else {
             // Start de upload
+            $('#imageUploadProgress').show();
             $("#drop-area-post").dmUploader("start");
+
         }
     } else {
         showNotification(2500, "Kon de post niet plaatsen :(", false);

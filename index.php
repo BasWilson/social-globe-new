@@ -30,13 +30,15 @@
 
     <div class="field-container new-post-div" id="new-post-div">
         <h3>Nieuwe post maken</h3>
-        <textarea placeholder="Schrijf iets in je post..." id="post-body" cols="60" rows="10"></textarea>
+        <textarea placeholder="Schrijf iets in je post..." id="post-body" cols="25" rows="6"></textarea>
         <br>
         <div id="drop-area-post">
-            <p>Sleep je foto hier heen (Optioneel)</p>
-            <input type="file" title="Of klik hier"><br>
+            
+            <button style="padding: 0px 0px;"><p style="margin-top: 10px;">Sleep je foto hier heen (Optioneel)</p><input style="opacity: 0; padding: 10px; cursor:pointer" type="file"></button>
+            <br>
+            <p id="image-name" ></p>
             <progress id="imageUploadProgress" value="0" max="100">0%</progress>
-        </div>
+        </div> 
         <button onclick="createPost()" >Plaats bericht</button>
     </div>
 
