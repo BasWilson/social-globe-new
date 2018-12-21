@@ -1,4 +1,5 @@
 .post-div {
+    color: white;
     max-width: 40%;
     padding: 20px;
     border-radius: 9px;
@@ -38,6 +39,7 @@
 .new-comment-div {
 }
 .new-post-div {
+    color: white;
     display: none;
     width: 100%;
     box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.1);

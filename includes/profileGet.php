@@ -100,21 +100,20 @@ function createProfileHTML ($users) {
         // vind het profiel
         if ($user->username == $_SESSION['username']) {
             // HTML opbouwen nu
-            $date = date("l", $user->memberSince) . " " . date("F", $user->memberSince) . " " . date("w", $user->memberSince) . ", " .  date("Y", $user->memberSince) . ".";
 
             $html .= '
                 <img src="images/profilePics/'.$user->profilePic.'" />
                 <a href="myprofile.php" class="pf-item">@'.$user->username.'</a>
                 <a class="pf-item">Volgers: '.sizeof($user->followers).'</a>
                 <a class="pf-item">Volgend: '.sizeof($user->following).'</a>
-                <p class="pf-item">Lid sinds: '.$date.'</p>
+                <p class="pf-item">Lid sinds: '.date('d/m/Y H:i:s', $user->memberSince).'</p>
             ';
 
             if ($user->public) {
-              $html .= '<button style="margin: 10px;" onclick="switchPrivacy();" >Maak profiel privé</button>';
+              $html .= '<button style="margin: 10px 20px 10px 20px;" onclick="switchPrivacy();" >Maak profiel privé</button>';
 
             } else {
-              $html .= '<button style="margin: 10px;" onclick="switchPrivacy();" >Maak profiel publiek</button>';
+              $html .= '<button style="margin: 10px 20px 10px 20px;" onclick="switchPrivacy();" >Maak profiel publiek</button>';
             }
 
         }

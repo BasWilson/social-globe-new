@@ -8,13 +8,26 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Vind mensen - Social Globe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- Include the required files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/posts.css">
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/queries.css" type="text/css">
+    <?php 
+        // Check what color mode
+        if ($_SESSION['darkMode']) {
+            echo '
+            <link rel="stylesheet" href="css/mainDark.css">
+            <link rel="stylesheet" href="css/postsDark.css">
+            <link rel="stylesheet" href="css/searchDark.css">
+            <link rel="stylesheet" href="css/queriesDark.css" type="text/css">
+            ';
+        } else {
+            echo '
+            <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="css/posts.css">
+            <link rel="stylesheet" href="css/search.css">
+            <link rel="stylesheet" href="css/queries.css" type="text/css">
+            ';
+        }
+    ?>
 
 </head>
 <body>
@@ -22,9 +35,9 @@
     <h3>Social Globe</h3>
     <div class="nav-container">
 
-      <a href="index.php" class="active">Feed</a>
-      <a href="find.php" style="margin-left:40px;" class="active">Vind mensen</a>
-      <a href="myprofile.php" style="color:blue; margin-left:40px;cursor:pointer;">My profile</a>
+      <a href="index.php">Feed</a>
+      <a href="find.php"  class="active"  style="margin-left:40px;">Vind mensen</a>
+      <a href="myprofile.php"style="margin-left:40px;cursor:pointer;">My profile</a>
       <a href="includes/userLogout.php" style="color:#FF1943; margin-left:40px;">Log out</a>
     </div>
   </nav>

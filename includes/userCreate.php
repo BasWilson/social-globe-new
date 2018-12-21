@@ -5,7 +5,7 @@
     require '../mailer/PHPMailer.php';
     require '../mailer/SMTP.php';
 
-    $username = $_POST['username'];
+    $username = strtolower($_POST['username']);
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -45,7 +45,7 @@
 
         // Maak het user object
         $user = (object) [
-            'username' => strip_tags($username),
+            'username' => strip_tags(strtolower($username)),
             'password' => password_hash($password, PASSWORD_BCRYPT),
             'email' => $email,
             'sessionToken' => 0,
@@ -55,6 +55,7 @@
             'profilePic' => "default.png",
             'emailVerification' => $emailToken,
             'verified' => false,
+            'darkMode' => false,
             'followers' => (array) [],
             'following' => (array) []
         ];

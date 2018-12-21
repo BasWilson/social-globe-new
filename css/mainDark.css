@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(29, 29, 29);
+  color: white;
 }
 
 .login-container {
@@ -32,34 +33,34 @@ input {
   padding: 10px;
   min-width: 70%;
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(107, 107, 107, 0.1);
   outline: none;
   border: none;
-  color: black;
+  color: white;
   transition: all .2s ease;
   box-sizing: border-box;
   margin: 10px 0px;
 }
 
 input:focus {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(107, 107, 107, 0.2);
 }
 
 textarea {
   padding: 10px;
   min-width: 70%;
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(107, 107, 107, 0.1);
   outline: none;
   border: none;
-  color: black;
+  color: white;
   transition: all .2s ease;
   box-sizing: border-box;
   margin: 10px 0px;
 }
 
 textarea:focus {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(107, 107, 107, 0.15);
 }
 
 
@@ -96,7 +97,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 7px;
 }
 
@@ -107,7 +108,7 @@ nav img {
 a {
   vertical-align: middle;
   text-decoration: none;
-  color: black;
+  color: white;
   transition: all .2s ease;
 }
 
@@ -170,6 +171,7 @@ tr:nth-child(even) {
 }
 
 .noti-box {
+  color: black;
   border-radius: 9px;
   display: none; 
   position: fixed; 
@@ -196,6 +198,7 @@ tr:nth-child(even) {
 
 
 .tip-div {
+  color: black;
   padding: 10px;
   border-radius: 9px;
   background-color: #92e32e;
@@ -204,7 +207,7 @@ tr:nth-child(even) {
 
 footer {
   margin-top: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 40px;
   text-align: center;
   align-content: center;

@@ -60,6 +60,7 @@ function createPost() {
                 success:function(data) {
                    if (data != 0) {
                         showNotification(2500, "Bericht is geplaatst", true);
+                        $('#post-body').val("");
                         toggleNewPostContainer();
                         refreshFeed();
 
@@ -92,3 +93,5 @@ function toggleNewPostContainer () {
         $(".new-post-btn-image").attr("src","css/newpostwhite.png");
     }
 }
+
+

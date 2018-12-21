@@ -19,11 +19,10 @@ function refreshProfile () {
             success:function(data) {
                 if (data != 0) {
                     $('#profile-div').empty();
-                    $('#profile-div').append("<h3 style='text-align: center;'>Profiel</h3>");
+                    //$('#profile-div').append("<h3 style='text-align: center;'>Profiel</h3>");
                     $('#profile-div').append(data.profileHTML);
                     $('#posts-div').empty();
                     $('#posts-div').append(data.postsHTML);
-                    $('#posts-div').append("<h3 style='text-align: center;'>Posts</h3>");
                     $('#posts-div').reverseChildren();
                 } else {
                     showNotification(4000, "We kunnen op dit moment niet het profiel laden", false);

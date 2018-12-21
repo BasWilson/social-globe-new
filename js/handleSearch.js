@@ -10,7 +10,6 @@ function getResults () {
 
     const username = $('#search-field').val();
 
-    if (username) {
         $.ajax({
             type: "POST",
             url: 'includes/profileFind.php',
@@ -26,5 +25,4 @@ function getResults () {
                 }     
             }
        });
-    }
 }

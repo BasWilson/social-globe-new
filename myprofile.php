@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profile - Social Globe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Include the required files -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -19,9 +19,9 @@
   <nav>
     <p>Social Globe</p>
     <div class="nav-container">
-      <a href="index.php" class="active">Feed</a>
-      <a href="find.php" style="margin-left:40px;" class="active">Vind mensen</a>
-      <a href="myprofile.php" id="new-member-btn" style="color:blue; margin-left:40px;cursor:pointer;">My profile</a>
+    <a href="index.php" >Feed</a>
+      <a href="find.php" style="margin-left:40px;">Vind mensen</a>
+      <a href="myprofile.php"  class="active" style="margin-left:40px;cursor:pointer;">My profile</a>
       <a href="includes/userLogout.php" style="color:#FF1943; margin-left:40px;">Log out</a>
     </div>
   </nav>

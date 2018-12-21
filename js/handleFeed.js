@@ -1,6 +1,20 @@
 $(document).ready(function() { 
     refreshFeed();
+
+    const ptr = PullToRefresh.init({
+        mainElement: 'body',
+        distThreshold: 100,
+        distMax: 120,
+        instructionsRefreshing: "AWHHHHGGGGHWWH",
+        instructionsPullToRefresh: "Trek mij af",
+        instructionsReleaseToRefresh: "Laat me komen",
+        onRefresh() {
+          refreshFeed();
+        },
+      });
+      
 }); 
+
 
 var editId = -1;
 

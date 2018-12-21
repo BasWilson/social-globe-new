@@ -87,6 +87,9 @@ function createPostHTML ($postId, $postsArray, $user) {
         $htmlcode .= '
         <img src="images/postImages/'.$post->image.'"/><br>';
       }
+      if ($post->posterUsername == $_SESSION['username']) {
+        $htmlcode .= '<a id="remove-btn-'.$postId.'" onclick="deletePost('.$postId.')" >Verwijder post | </a>';
+      }
       $htmlcode .= '<a id="like-btn-'.$postId.'" onclick="likePost('.$postId.')" >'.$post->likes.' likes</a>';
 
       // Kijk of er comments zijn

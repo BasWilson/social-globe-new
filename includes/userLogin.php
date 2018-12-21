@@ -1,17 +1,18 @@
 <?php
 
-$username = $_POST['username'];
+
+$username = strtolower($_POST['username']);
 $password = $_POST['password'];
 
 $file = "../data/users.json";
 $jsondata = file_get_contents($file);
 $data = json_decode($jsondata);
 
-if (isset($_POST["username"]) && isset($_POST["password"])) {
+if (isset($username) && isset($_POST["password"])) {
 
     foreach ($data->users as $key => $user) {
         // Vind de user
-        if ($user->username == $_POST["username"]) {
+        if ($user->username == $username) {
             // Kijk of de password overeenkomt met de opgeslagen hash
             if (password_verify($_POST["password"], $user->password)) {
 
@@ -23,7 +24,8 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
                 $user->sessionToken = $sessionToken;
                 $user->lastSignIn = $date->getTimestamp();
                 $_SESSION['sessionToken'] = $sessionToken;
-                $_SESSION['username'] = $user->username;
+                $_SESSION['username'] = strtolower($user->username);
+                $_SESSION['darkMode'] = $user->darkMode;
 
                 // Kijk of het goed is opgeslagen
                 if ($_SESSION['sessionToken'] == $sessionToken) {

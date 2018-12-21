@@ -172,11 +172,11 @@ function createProfileHTML ($users, $userToGet) {
                 ';
                 
                 if (in_array($_SESSION['username'], $user->followers)) {
-                    $html .= '<button style="margin: 10px;"  onclick="follow(\''.$userToGet.'\')" >Ontvolg</button>';
+                    $html .= '<button style="margin: 10px 20px 10px 20px;"  onclick="follow(\''.$userToGet.'\')" >Ontvolg</button>';
                 } else if ($_SESSION['username'] ==  $userToGet) {
                     $html .= '<p class="pf-item">Dit is hoe andere jouw profiel zien</p>';
                 } else {
-                    $html .= '<button style="margin: 10px;" onclick="follow(\''.$userToGet.'\')" >Volg</button>';
+                    $html .= '<button style="margin: 10px 20px 10px 20px;" onclick="follow(\''.$userToGet.'\')" >Volg</button>';
                 }
 
 

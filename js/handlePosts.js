@@ -7,23 +7,33 @@ function saveComment (id) {
 
     var comment = $("#comment-input-"+id).val();
 
+
     if (comment) {
-        $.ajax({
-            type: "POST",
-            url: 'includes/postCreateComment.php',
-            data: {
-              comment: comment,
-              postId: id
-            },
-            success:function(data) {
-               if (data != 0) {
-                    showNotification(2500, "Comment is geplaatst", true);
-                    refreshFeed();
-                } else {
-                    showNotification(2500, "Kon de comment niet plaatsen :(", false);
-                }
+
+        // Check of het alleen maar spaties zijn
+        if (comment.replace(/\s/g, '').length) {
+            if (comment.length > 150) {
+                return showNotification(2000, "Maximaal 150 karakters per comment.", false);
             }
-       });
+            $.ajax({
+                type: "POST",
+                url: 'includes/postCreateComment.php',
+                data: {
+                  comment: comment,
+                  postId: id
+                },
+                success:function(data) {
+                   if (data != 0) {
+                        showNotification(2500, "Comment is geplaatst", true);
+                        refreshFeed();
+                    } else {
+                        showNotification(2500, "Kon de comment niet plaatsen :(", false);
+                    }
+                }
+           });
+
+        }
+
     }
 
 }
@@ -57,6 +67,27 @@ function likePost (id) {
         }
     }
 
+
+}
+
+function deletePost (id) {
+
+    if (id) {
+        $.ajax({
+            type: "POST",
+            url: 'includes/postDelete.php',
+            data: {
+                postId: id
+            },
+            success:function(data) {
+                if (data != 0) {
+                    refreshFeed();
+                } else {
+                    showNotification(2500, "Kon de post niet verwijderen.", false);
+                }
+            }
+        });
+    }
 
 }
 
