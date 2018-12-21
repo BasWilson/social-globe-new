@@ -9,22 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Vind mensen - Social Globe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <link rel="stylesheet" href="css/search.css">
     <?php 
         // Check what color mode
         if ($_SESSION['darkMode']) {
             echo '
-            <link rel="stylesheet" href="css/mainDark.css">
-            <link rel="stylesheet" href="css/postsDark.css">
-            <link rel="stylesheet" href="css/searchDark.css">
-            <link rel="stylesheet" href="css/queriesDark.css" type="text/css">
+            <link rel="stylesheet" href="css/dark.css" type="text/css">
             ';
         } else {
             echo '
-            <link rel="stylesheet" href="css/main.css">
-            <link rel="stylesheet" href="css/posts.css">
-            <link rel="stylesheet" href="css/search.css">
-            <link rel="stylesheet" href="css/queries.css" type="text/css">
+            <link rel="stylesheet" href="css/light.css" type="text/css">
             ';
         }
     ?>
@@ -39,6 +35,14 @@
       <a href="find.php"  class="active"  style="margin-left:40px;">Vind mensen</a>
       <a href="myprofile.php"style="margin-left:40px;cursor:pointer;">My profile</a>
       <a href="includes/userLogout.php" style="color:#FF1943; margin-left:40px;">Log out</a>
+      <?php 
+        // Check what color mode
+        if ($_SESSION['darkMode']) {
+            echo '<img onclick="darkMode()" src="css/lightmode.png" style="margin:0px 25px 0px 40px; cursor: pointer" />';
+        } else {
+            echo '<img onclick="darkMode()" src="css/darkmode.png" style="margin:0px 25px 0px 40px; cursor: pointer" />';
+        }
+        ?>
     </div>
   </nav>
 
@@ -72,7 +76,7 @@
     </div>
 
     <div onclick="toggleNewPostContainer()" class="new-post-btn">
-        <img class="new-post-btn-image" src="css/newpostwhite.png" />
+    <p style="color: black;">Plaats post</p>
     </div>
 
     <footer>

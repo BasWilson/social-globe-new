@@ -9,20 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Feed - Social Globe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/posts.css">
 
     <?php 
         // Check what color mode
         if ($_SESSION['darkMode']) {
             echo '
-            <link rel="stylesheet" href="css/mainDark.css">
-            <link rel="stylesheet" href="css/postsDark.css">
-            <link rel="stylesheet" href="css/queriesDark.css" type="text/css">
+            <link rel="stylesheet" href="css/dark.css" type="text/css">
             ';
         } else {
             echo '
-            <link rel="stylesheet" href="css/main.css">
-            <link rel="stylesheet" href="css/posts.css">
-            <link rel="stylesheet" href="css/queries.css" type="text/css">
+            <link rel="stylesheet" href="css/light.css" type="text/css">
             ';
         }
     ?>
@@ -39,9 +37,9 @@
       <?php 
         // Check what color mode
         if ($_SESSION['darkMode']) {
-            echo '<a onclick="darkMode()" style="color:blue; margin-left:40px; cursor: pointer">Light mode</a>';
+            echo '<img onclick="darkMode()" src="css/lightmode.png" style="margin:0px 25px 0px 40px; cursor: pointer" />';
         } else {
-            echo '<a onclick="darkMode()" style="color:blue; margin-left:40px; cursor: pointer">Dark mode (BETA)</a>';
+            echo '<img onclick="darkMode()" src="css/darkmode.png" style="margin:0px 25px 0px 40px; cursor: pointer" />';
         }
         ?>
     </div>
@@ -74,7 +72,7 @@
     </div>
 
     <div onclick="toggleNewPostContainer()" class="new-post-btn">
-        <img class="new-post-btn-image" src="css/newpostwhite.png" />
+        <p style="color: black;">Plaats post</p>
     </div>
 
     <footer>

@@ -1,4 +1,16 @@
 {
     "posts": [
+        {
+            "body": "test",
+            "image": "1545420529.jpg",
+            "comments": [
+                {
+                    "comment": "fyjhfhg",
+                    "commenterUsername": "socialglobe"
+                }
+            ],
+            "likes": 0,
+            "posterUsername": "socialglobe"
+        }
     ]
 }

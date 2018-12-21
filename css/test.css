@@ -1,0 +1,79 @@
+@media screen and (min-width: 375px) and (max-width: 890px) {
+    /* mobile and tablet css */
+    .new-post-btn {
+      right: 20px;
+      bottom: 20px;
+      border-radius: 100px;
+      background-color: #92e32e;
+      padding: 10px;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+  
+    .post-div {
+      width: 100%;
+      padding: 20px;
+      border-radius: 9px;
+      margin: 10px 0px;
+    }
+  
+    .profile-body {
+      flex-direction: column;
+  }
+    .profile-div {
+      width: 100%;
+    }
+    .noti-box {
+      width: 90%;
+      left: 0;
+      bottom: 10px;
+      right: 0;
+      margin: 0 auto;
+    }
+  
+    .post-div img {
+      border-radius: 9px;
+      margin: 10px 0px;
+      width: 100%; 
+    }
+    .post-top img {
+      width: 35px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 6000px) {
+    /* large screens */
+    body {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+    .profile-div {
+      width: 30%;
+      padding: 10px;
+      border-radius: 9px;
+      margin-right: 20px;
+      box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.1);
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: 890px) and (max-width: 1024px) {
+    /* normal css */
+    body {
+      max-width: 80%;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .profile-div {
+      width: 30%;
+      padding: 10px;
+      border-radius: 9px;
+      margin-right: 20px;
+      box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.1);
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

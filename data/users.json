@@ -44,14 +44,14 @@
             "username": "socialglobe",
             "password": "$2y$10$DYMfKm4wIwwpYzpIuTYzwOXd7aeh4qyKdpFPILqt5GZxYHK6TstHq",
             "email": "bas.marijn.wilson@gmail.com",
-            "sessionToken": "5a4ef8b64c14d3aa99caf10e085a5fa0086377dbd00f1434f0dac573fc50f8a7922bea9b142134ff7711b9ed797097ef914196b5516fe419d947799886da164c",
-            "lastSignIn": 1545336453,
+            "sessionToken": "f7b8a2db10d1f1decc8b4315cfe624538c4ccf20a460624a41eb177a41218d2159f6d43f19b6fcabe1d8424f70b2bd98e6cc2e06bef0bd7b71cc5ba8df460da8",
+            "lastSignIn": 1545431283,
             "memberSince": 1545305637,
             "public": true,
             "profilePic": "default.png",
             "emailVerification": "14324a1f3cd794e455f74809bbbde3667a952bde293f4417f4c58e78bc9f0a20ba2dd453227b7af6fa80a0ef433819503b28613b361335ed0c2e49484009be4c",
             "verified": true,
-            "darkMode": false,
+            "darkMode": true,
             "followers": [
                 "baswilson",
                 "nick"

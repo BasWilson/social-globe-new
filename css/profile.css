@@ -24,18 +24,14 @@
     margin: 10px 20px;
     padding: 10px;
     border-radius: 7px;
-    background-color: rgba(0, 0, 0, 0.1);
     outline: none;
     border: none;
-    color: black;
 }
 
 .profile-body {
     display: flex;
     flex-direction: row;
 }
-
-
 
 /* POSTS */
 
@@ -87,6 +83,92 @@
 
 .post-div img {
     border-radius: 9px;
-    margin: 0 auto;
+    margin: 10px 0px;
     max-width: 100%;
 }
+
+@media screen and (min-width: 0px) and (max-width: 890px) {
+
+
+  
+    .profile-body {
+        flex-direction: column;
+    }
+    .profile-div {
+        width: 100%;
+    }
+  
+    .post-div img {
+      border-radius: 9px;
+    }
+    .post-top img {
+      width: 35px;
+    }
+  
+    .pf-item {
+      padding: 5px;
+    }
+
+    .new-post-btn {
+        right: 30px !important;
+        bottom: 30px !important;
+        padding: 5px;
+      }
+      .post-div {
+        max-width: 100% !important;
+        width: 100% !important;
+        border-radius: 9px !important;
+        margin: 10px 0px !important;
+      }
+      .post-div img {
+        border-radius: 9px !important;
+        max-width: 100% !important;
+        width: 100% !important; 
+      }
+      .posts-div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+      }
+  }
+
+
+  
+  @media screen and (min-width: 1024px) and (max-width: 6000px) {
+    /* large screens */
+    body {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+    .profile-div {
+      width: 30%;
+      padding: 10px;
+      border-radius: 9px;
+      margin-right: 20px;
+      box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.1);
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: 890px) and (max-width: 1024px) {
+    /* normal css */
+    body {
+      max-width: 80%;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .profile-div {
+      width: 30%;
+      padding: 10px;
+      border-radius: 9px;
+      margin-right: 20px;
+      box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.1);
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

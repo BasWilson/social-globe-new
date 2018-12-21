@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
 * {
-
   font-weight: 700;
   font-family: Quicksand;
-}
-
-body {
-  background-color: white;
 }
 
 .login-container {
@@ -32,36 +27,23 @@ input {
   padding: 10px;
   min-width: 70%;
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.1);
   outline: none;
   border: none;
-  color: black;
   transition: all .2s ease;
   box-sizing: border-box;
   margin: 10px 0px;
-}
-
-input:focus {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 textarea {
   padding: 10px;
   min-width: 70%;
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.1);
   outline: none;
   border: none;
-  color: black;
   transition: all .2s ease;
   box-sizing: border-box;
   margin: 10px 0px;
 }
-
-textarea:focus {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
 
 
 button {
@@ -72,7 +54,7 @@ button {
   outline: none;
   cursor: pointer;
   transition: all .2s ease;
-  background-color: #92e32e;
+  background-color: rgb(255, 238, 0);
 }
 
 button:hover {
@@ -82,47 +64,27 @@ button:hover {
 
 button:active {
   filter: brightness(0.8);
-
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  margin: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 7px;
-}
-
-nav img {
-  height: 20px;
-}
 
 a {
   vertical-align: middle;
   text-decoration: none;
-  color: black;
   transition: all .2s ease;
 }
 
 a:hover {
   transform: translateY(-3px);
-  color: #92e32e;
+  color: rgb(255, 238, 0);
 }
 a:active {
-  color: #92e32e;
+  color: rgb(255, 238, 0);
   transform: translateY(0px);
   filter: brightness(0.8);
 }
 
 .active {
-  color: #92e32e;
+  color: rgb(255, 238, 0);
 }
 
 .field-container {
@@ -198,13 +160,12 @@ tr:nth-child(even) {
 .tip-div {
   padding: 10px;
   border-radius: 9px;
-  background-color: #92e32e;
+  background-color: rgba(255, 238, 0, 0.5);
   margin: 20px 0px;
 }
 
 footer {
   margin-top: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 40px;
   text-align: center;
   align-content: center;
@@ -216,4 +177,118 @@ footer p {
 }
 progress {
   display: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+nav img {
+  height: 30px;
+}
+
+
+/* QUERIES */
+
+@media screen and (min-width: 0px) and (max-width: 890px) {
+  /* mobile and tablet css */
+  .new-post-btn {
+    right: 30px !important;
+    bottom: 30px !important;
+    padding: 5px;
+  }
+
+  .post-div {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 20px !important;
+    border-radius: 9px !important;
+    margin: 10px 0px !important;
+  }
+  .post-div img {
+    border-radius: 9px !important;
+    margin: 10px 0px !important;
+    width: 100% !important; 
+  }
+  .profile-body {
+    flex-direction: column;
+  }
+  .profile-div {
+    width: 100% !important;
+  }
+  .noti-box {
+    width: 90% !important;
+    left: 0 !important;
+    bottom: 10px !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .post-top img {
+    width: 35px !important;
+  }
+  .nav-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  nav {
+    margin: 10px 0px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .search-result img {
+    width: 35px !important;
+  }
+
+  .pf-item {
+    padding: 5px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 6000px) {
+  /* large screens */
+  body {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 890px) and (max-width: 1024px) {
+  /* normal css */
+  body {
+    max-width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .nav-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: baseline !important;
+  }
+  nav {
+    margin: 10px 0px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: left !important;
+  }
+  nav a {
+    margin: 5px 0px !important;
+  }
+  nav img {
+    margin: 5px 0px !important;
+  }
 }

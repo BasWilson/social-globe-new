@@ -13,16 +13,16 @@
 
 .post-div img {
     border-radius: 9px;
-    margin: 0 auto;
+    margin: 10px 0px;
     max-width: 100%;
 }
 .new-post-btn {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    border-radius: 100px;
-    background-color: #92e32e;
-    padding: 20px;
+    border-radius: 9px;
+    background-color: rgb(255, 238, 0);
+    padding: 10px;
     cursor: pointer;
     transition: all .2s ease;
 }
@@ -35,8 +35,10 @@
     width: 35px;
 }
 
-.new-comment-div {
+.new-comment-div input {
+    margin-right: 10px;
 }
+
 .new-post-div {
     display: none;
     width: 100%;
@@ -64,7 +66,6 @@
     background-color: rgba(0, 0, 0, 0.1);
     outline: none;
     border: none;
-    color: black;
     box-sizing: border-box;
     margin: 10px 0px;
 }
@@ -81,12 +82,12 @@ progress[value] {
      appearance: none;
     width: 250px;
     height: 20px;
-    background-color:  #92e32e;
+    background-color:  rgb(255, 238, 0);
     border-radius: 9px;
 }
   
 progress {
-    background-color:  #92e32e;
+    background-color:  rgb(255, 238, 0);
     border-radius: 9px;
 }
 
@@ -102,8 +103,31 @@ progress {
     display: inline-block;
 }
 
-.post-top img {
-    width: 35px;
+
+
+@media screen and (min-width: 375px) and (max-width: 890px) {
+    /* mobile and tablet css */
+    .new-post-btn {
+      right: 30px !important;
+      bottom: 30px !important;
+      padding: 5px;
+    }
+    .post-div {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding: 20px !important;
+      border-radius: 9px !important;
+      margin: 10px 0px !important;
+    }
+    .post-div img {
+      border-radius: 9px !important;
+      margin: 10px 0px !important;
+      width: 100% !important; 
+    }
+  }
+
+  .post-top img {
+    width: 35px !important;
     vertical-align: middle;
     margin-right: 10px;
-}
+  }

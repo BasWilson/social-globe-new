@@ -20,7 +20,6 @@ function verifiyToken () {
     
     foreach ($data->users as $key => $user) {
 
-    
         // Kijk of de username en sessionToken gelijk zijn als die in de DB (json)
         if (!$user->username == strtolower($_SESSION['username']) && !$user->sessionToken == $_SESSION['sessionToken'] ) {
             session_destroy();

@@ -8,7 +8,7 @@ function showNotification (duration, text, status) {
     notiText.innerHTML = text;
     
     if (status) {
-        notiBox.style.backgroundColor = "rgba(146, 227, 46, 0.5)";
+        notiBox.style.backgroundColor = "rgba(255, 238, 0, 0.5)";
     } else {
         notiBox.style.backgroundColor = "rgba(255, 0, 0, 0.5)";        
     }

@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+input {
+    background-color: rgba(107, 107, 107, 0.1);
+    color: white;
+}
+
+input:focus {
+    background-color: rgba(107, 107, 107, 0.2);
+}
+
+textarea {
+    background-color: rgba(107, 107, 107, 0.1);
+    color: white;
+}
+
+textarea:focus {
+    background-color: rgba(107, 107, 107, 0.15);
+  }
+
+a {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+nav {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.noti-box {
+    color: black;
+}
+
+.post-div {
+    color: white;
+}
+
+.new-post-div {
+    color: white;
+}
+
+.post-comment-div {
+    color: white;
+}
+
+.pf-item {
+    background-color: rgba(107, 107, 107, 0.1);
+    color: white;
+}

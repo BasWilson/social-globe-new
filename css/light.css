@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+input:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+textarea:focus {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  
+a {
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+footer {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+nav {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+.noti-box {
+    color: black;
+}
+
+.post-div {
+    color: black;
+}
+
+.new-post-div {
+    color: black;
+}
+
+.post-comment-div {
+    color: black;
+}
+
+.pf-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
